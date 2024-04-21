@@ -14,10 +14,10 @@ def start_main(message):
                                       f'телеграмм')
 
 
-@bot.message_handler(commands=['help'])
-def help_message(message):
-    bot.send_message(message.chat.id, 'заглушка')
-    # инструкция по работе с ботом !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+@bot.message_handler(commands=["help"])
+def get_help(message):
+    bot.send_message(message.chat.id, "/start - начать программу\n/register - регистрация в базе данных\n"
+                                      "/reset - сбросить данные \n/help - помощь по командам")
 
 
 @bot.message_handler(commands=["reset"])
